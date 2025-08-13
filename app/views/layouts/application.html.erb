@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= content_for(:title) || "Pacefamily" %></title>
+    <title><%= content_for(:title) || "Pace Family" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="mobile-web-app-capable" content="yes">
@@ -25,9 +25,19 @@
     <link rel="stylesheet" href="https://early.webawesome.com/webawesome@3.0.0-beta.4/dist/styles/webawesome.css" />
     <script type="module" src="https://early.webawesome.com/webawesome@3.0.0-beta.4/dist/webawesome.loader.js"></script>
     <script src="https://kit.fontawesome.com/dc8a27351f.js" crossorigin="anonymous"></script>
+
+    <%# adding mermaid %>
+    <%= javascript_include_tag "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js", defer: true %>
   </head>
 
   <body>
     <%= yield %>
   </body>
 </html>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    mermaid.initialize({ startOnLoad: true });
+  });
+</script>
+

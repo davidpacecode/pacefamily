@@ -1,0 +1,26 @@
+---
+title: Onuska Cousin Tree
+---
+
+<article class="sitepress">
+  <h1 align="center"><%= current_page.data.fetch("title") %></h1>
+
+  <div class="mermaid">
+    graph TD
+      A[Grandma and Grandpa Onuska] --> B[Onuska]
+      A --> C[Smith]
+      A --> D[Pisarchik]
+      A --> E[Pace]
+      A --> F[Cosmas]
+      A --> G[Berman]
+      A --> H[Orfini]
+      B --> I[Uncle Mike and Aunt Sot]
+      I --> J[Michael and ...]
+      I --> K[<%= link_to "Chris and Rebecca", "https://hummelgifts.com/" %>]
+      I --> L[Jenny and Paul and then ...]
+      J --> M[Brooke, Brayden, and ...]
+  </div>
+
+  <br />
+  <%= link_to "Pace Family Home", root_path %>
+</article>
