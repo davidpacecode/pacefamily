@@ -25,7 +25,6 @@ test:
 # is mounted as a persistent Docker volume in config/deploy.yml.
 production:
   <<: *default
-# database: storage/production.sqlite3
   database: /home/deploy/pacefamily/shared/production.sqlite3
   cache:
     <<: *default
