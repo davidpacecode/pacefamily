@@ -28,13 +28,13 @@ production:
   database: /home/deploy/pacefamily/shared/production.sqlite3
   cache:
     <<: *default
-    database: /home/deploy/pacefamily/storage/production_cache.sqlite3
+    database: /home/deploy/pacefamily/shared/production_cache.sqlite3
     migrations_paths: db/cache_migrate
   queue:
     <<: *default
-    database: /home/deploy/pacefamily/storage/production_queue.sqlite3
+    database: /home/deploy/pacefamily/shared/production_queue.sqlite3
     migrations_paths: db/queue_migrate
   cable:
     <<: *default
-    database: /home/deploy/pacefamily/storage/production_cable.sqlite3
+    database: /home/deploy/pacefamily/shared/production_cable.sqlite3
     migrations_paths: db/cable_migrate
