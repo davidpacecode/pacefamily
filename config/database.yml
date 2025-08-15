@@ -26,15 +26,22 @@ test:
 production:
   <<: *default
   database: /home/deploy/pacefamily/shared/production.sqlite3
-  cache:
-    <<: *default
-    database: /home/deploy/pacefamily/shared/production_cache.sqlite3
-    migrations_paths: db/cache_migrate
-  queue:
-    <<: *default
-    database: /home/deploy/pacefamily/shared/production_queue.sqlite3
-    migrations_paths: db/queue_migrate
-  cable:
-    <<: *default
-    database: /home/deploy/pacefamily/shared/production_cable.sqlite3
-    migrations_paths: db/cable_migrate
+
+# Separate top-level configurations for Rails 8 Solid adapters
+production_cache:
+  <<: *default
+  database: /home/deploy/pacefamily/shared/production_cache.sqlite3
+  migrations_paths: db/cache_migrate
+
+production_queue:
+  <<: *default
+  database: /home/deploy/pacefamily/shared/production_queue.sqlite3
+  migrations_paths: db/queue_migrate
+
+production_cable:
+  <<: *default
+  database: /home/deploy/pacefamily/shared/production_cable.sqlite3
+  migrations_paths: db/cable_migrate
+
+
+ 
