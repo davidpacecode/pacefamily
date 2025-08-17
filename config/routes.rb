@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
-  sitepress_pages
-  sitepress_root
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  resource :session
+  resources :passwords, param: :token
+  # Use custom controller for Sitepress pages
+  # sitepress_pages
+  # sitepress_root
+  sitepress_pages controller: "sitepress"
+  sitepress_root controller: "sitepress"  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
   # Can be used by load balancers and uptime monitors to verify that the app is live.

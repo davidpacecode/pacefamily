@@ -29,7 +29,30 @@
   </head>
 
   <body>
-    <%= yield %>
+    <wa-page>
+
+      <header slot="header">
+
+      </header>
+
+      <nav slot="navigation">
+        <%= link_to "Home", root_path %>
+        <%= button_to "Log out", session_path, method: :delete if authenticated? %>
+      </nav>
+
+      <main>
+
+        <%= yield %>
+
+      </main>
+
+      <footer slot="footer">
+
+      </footer>
+
+    </wa-page>
+ 
+ 
   </body>
 </html>
 
