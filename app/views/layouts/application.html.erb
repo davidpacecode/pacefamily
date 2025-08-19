@@ -32,12 +32,42 @@
     <wa-page>
 
       <header slot="header">
+        <div class="wa-split">
+          <%= link_to root_path do %>
+            <div class="wa-cluster">
+              <i class="fa-solid fa-family fa-bounce fa-2xl" style="color: var(--wa-color-blue-40);"></i>
+              <span class="wa-body-xl">pace.family</span>
+            </div>
+          <% end %>
+
+          <div class="wa-cluster">
+            <%# link_to "Hello, #{Current.user.nickname}", edit_user_path if authenticated? %>
+            <%= link_to "Login", new_session_path unless authenticated? %>
+            <%= link_to "Log out", session_path, data: { turbo_method: :delete } if authenticated? %>
+          </div>
+        </div>
+
+        <style>
+          .placeholder {
+            min-block-size: 300px;
+            background-color: var(--wa-color-neutral-fill-quiet);
+            border: dashed var(--wa-border-width-s) var(--wa-color-neutral-border-normal);
+            border-radius: var(--wa-border-radius-l);
+          }
+        </style>
 
       </header>
 
       <nav slot="navigation">
-        <%= link_to "Home", root_path %>
-        <%= button_to "Log out", session_path, method: :delete if authenticated? %>
+        <%= link_to "calendar" do %>
+          <span class="wa-body-m">Calendar</span>
+          <i class="fa-solid fa-lock"></i>
+        <% end %>
+        <%= link_to "vacation" do %>
+          <span class="wa-body-m">Vacation</span>
+          <i class="fa-solid fa-lock"></i>
+        <% end %>
+        <%= link_to "onuska.family", "onuska" %>
       </nav>
 
       <main>
