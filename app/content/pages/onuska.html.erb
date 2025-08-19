@@ -4,40 +4,42 @@ public: true
 ---
 
 <article class="sitepress">
-  <h1><%= current_page.data.fetch("title") %></h1>
+  <!-- <h1 style="text-align: center;"><%= current_page.data.fetch("title") %></h1> -->
 
-  <%= link_to "Back to pace.family", root_path %>
-  <br />
-  <br />
-  <br />
+  <div style="text-align: center;">
+    <%= image_tag "onuska_bunch.png" %>
+  </div>
 
-  <%= image_tag "onuska_bunch.png" %>
   <br />
   <br />
 
-  <div class="wa-grid" style="display: inline-grid; grid-template-columns: repeat(3, 200px); grid-template-rows: repeat(3, 200px); gap: 10px; background-color: black; padding: 2px;">
-      <wa-card appearance="filled" style="height: 200px; width: 200px; background-color: var(--wa-color-blue-70); border-radius: 0;">
-        <%= image_tag "mary_anne.jpg", style: "width: 120px; height: 120px; object-fit: cover; border-radius: 50%;", alt: "Aunt Mary Anne" %>
-      </wa-card>
-      <wa-card appearance="filled" style="height: 200px; width: 200px; background-color: var(--wa-color-blue-70); border-radius: 0;"></wa-card>
-      <wa-card appearance="filled" style="height: 200px; width: 200px; background-color: var(--wa-color-blue-70); border-radius: 0;"></wa-card>
-      <wa-card appearance="filled" style="height: 200px; width: 200px; background-color: var(--wa-color-blue-70); border-radius: 0;"></wa-card>
-      <wa-card appearance="filled" style="height: 200px; width: 200px; background-color: var(--wa-color-blue-70); border-radius: 0;"></wa-card>
-      <wa-card appearance="filled" style="height: 200px; width: 200px; background-color: var(--wa-color-blue-70); border-radius: 0;"></wa-card>
-      <wa-card appearance="filled" style="height: 200px; width: 200px; background-color: var(--wa-color-blue-70); border-radius: 0;"></wa-card>
-      <wa-card appearance="filled" style="height: 200px; width: 200px; background-color: var(--wa-color-blue-70); border-radius: 0;"></wa-card>
-      <wa-card appearance="filled" style="height: 200px; width: 200px; background-color: var(--wa-color-blue-70); border-radius: 0;"></wa-card>
+  <div style="text-align: center;">
+    <div class="wa-grid" style="display: inline-grid; grid-template-columns: repeat(3, 200px); grid-template-rows: repeat(3, 200px); gap: 10px; background-color: black; padding: 2px; margin: 0 auto;">
+        <wa-card appearance="filled" style="height: 200px; width: 200px; background-color: var(--wa-color-blue-70); border-radius: 0;">
+          <%= image_tag "aunt_mary_anne.png", style: "object-fit: cover;", alt: "Aunt Mary Anne" %>
+        </wa-card>
+        <wa-card appearance="filled" style="height: 200px; width: 200px; background-color: var(--wa-color-blue-70); border-radius: 0;"></wa-card>
+        <wa-card appearance="filled" style="height: 200px; width: 200px; background-color: var(--wa-color-blue-70); border-radius: 0;"></wa-card>
+        <wa-card appearance="filled" style="height: 200px; width: 200px; background-color: var(--wa-color-blue-70); border-radius: 0;"></wa-card>
+        <wa-card appearance="filled" style="height: 200px; width: 200px; background-color: var(--wa-color-blue-70); border-radius: 0;"></wa-card>
+        <wa-card appearance="filled" style="height: 200px; width: 200px; background-color: var(--wa-color-blue-70); border-radius: 0;"></wa-card>
+        <wa-card appearance="filled" style="height: 200px; width: 200px; background-color: var(--wa-color-blue-70); border-radius: 0;"></wa-card>
+        <wa-card appearance="filled" style="height: 200px; width: 200px; background-color: var(--wa-color-blue-70); border-radius: 0;"></wa-card>
+        <wa-card appearance="filled" style="height: 200px; width: 200px; background-color: var(--wa-color-blue-70); border-radius: 0;"></wa-card>
+    </div>
   </div>
 
 
-  <% CousinPage.all.each do |cousin| %>
-    <div class="cousin">
-      <h2><%= cousin.name %></h2>
-      <%= cousin.parents %>
-      <%= cousin.children %>
-      <%= cousin.news_brief %>
-      <a href="<%= cousin.request_path %>">More news...</a>
-    </div>
+  <% if false %>
+    <% CousinPage.all.each do |cousin| %>
+      <div class="cousin">
+        <h2><%= cousin.name %></h2>
+        <%= cousin.parents %>
+        <%= cousin.children %>
+        <%= cousin.news_brief %>
+        <a href="<%= cousin.request_path %>">More news...</a>
+      </div>
+    <% end %>
   <% end %>
 
   <wa-card style="max-width: 70ch; margin: auto">
