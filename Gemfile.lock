@@ -329,7 +329,7 @@ GEM
       railties (>= 7.0)
       sitepress-core (= 4.0.8)
       sprockets-rails (>= 2.0.0)
-    solid_cable (3.0.11)
+    solid_cable (3.0.12)
       actioncable (>= 7.2)
       activejob (>= 7.2)
       activerecord (>= 7.2)
