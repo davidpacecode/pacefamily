@@ -33,7 +33,7 @@ public: true
 
 
   <% CousinPage.all.each do |cousin| %>
-    <%# render cousin %>
+    <%= render "cousin", cousin: cousin %>
     <a href="<%= cousin.request_path %>">More news...</a>
   <% end %>
 
