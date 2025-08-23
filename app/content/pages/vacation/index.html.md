@@ -10,8 +10,7 @@ Here is where we'll plan vacation stuff
 
 ### Thanksgiving 2025
 
-- Vegas?
-- Skiing in Colorado?
+I asked Claude to frame out a possible vacation for us. Here is [Claude's summary for a Durango ski vacation](./durango_ski_vacation)
 
 ### Christmas 2025
 
