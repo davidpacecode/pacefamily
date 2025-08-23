@@ -1,4 +1,4 @@
 class CousinPage < Sitepress::Model
   collection glob: "cousins/*.html*"
-  data :name, :parents, :children, :news_brief
+  data :first_name, :last_name, :url, :parents, :spouse, :children, :news_brief
 end

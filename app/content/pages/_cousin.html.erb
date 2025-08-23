@@ -1,5 +1,5 @@
       <wa-details>
-        <span class="wa-heading-m" slot="summary">Michael</span>
+        <span class="wa-heading-m" slot="summary"><%= cousin.first_name %></span>
         <div class="wa-stack">
           <article class="wa-flank">
             <i class="fa-solid fa-people fa-xl" style="color: var(--wa-color-blue-30)"></i>
@@ -7,7 +7,7 @@
               <div class="wa-stack wa-gap-0">
                 <span class="wa-heading-s">Cousins</span>
                 <div class="wa-cluster wa-gap-2xs">
-                  <span><%= link_to "Michael", "https://www.linkedin.com/in/michael-onuska-273bb513/" %> and Melissa</span>
+                  <span><%= link_to cousin.first_name, cousin.url %> and <%= cousin.spouse %></span>
                   <br />
                 </div>
               </div>
@@ -20,7 +20,7 @@
               <div class="wa-stack wa-gap-0">
                 <span class="wa-heading-s">Children</span>
                 <div class="wa-cluster wa-gap-2xs">
-                  <span>Brooke, Brayden, and Brielle</span>
+                  <span><%= cousin.children %></span>
                   <br />
                 </div>
               </div>
@@ -32,7 +32,7 @@
             <div class="wa-split">
               <div class="wa-stack wa-gap-0">
                 <span class="wa-heading-s">News</span>
-                <span>Living in Watchung, NJ. Co-owns <%= link_to "Sunburst Gymnastics", "https://www.sunburstnj.com/" %></span>
+                <span><%= cousin.news %></span>
               </div>
             </div>
           </article>
