@@ -8,3 +8,17 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+body, wa-page, header, nav, footer {
+  background-color: var(--wa-color-blue-95);
+  padding: 20px;
+}
+
+wa-page, main {
+  border: 1px solid #ddd;           /* Optional border */
+  border-radius: 8px;               /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Drop shadow */
+  padding: 20px;                    /* Inner spacing */
+  background-color: white;          /* Background color */
+}
+

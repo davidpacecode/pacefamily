@@ -10,7 +10,11 @@ Here is where we'll plan vacation stuff
 
 ### Thanksgiving 2025
 
+- Vegas?
+- Skiing in Colorado?
 
 ### Christmas 2025
 
-Ho, ho, ho...
+![NYC Christmas Proposal](https://public.3.basecamp.com/p/MevtafkLuzywebWDW8t993qJ/upload/download/Screenshot%202025-08-20%20at%206.08.55%E2%80%AFPM.jpeg)
+
+
