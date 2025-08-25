@@ -10,7 +10,11 @@ Here is where we'll plan vacation stuff
 
 ### Thanksgiving 2025
 
-I asked Claude to frame out a possible vacation for us. Here is [Claude's summary for a Durango ski vacation](/vacation/durango_ski_vacation)
+Here is some research from Claude:
+
+- [Durango ski vacation](/vacation/durango_ski_vacation)
+- [Breckenridge ski vacation](/vacation/breckenridge_ski_vacation)
+
 
 ### Christmas 2025
 
