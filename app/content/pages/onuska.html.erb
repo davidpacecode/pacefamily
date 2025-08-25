@@ -31,137 +31,15 @@ public: true
     </div>
   </div>
 
-
-  <% CousinPage.all.each do |cousin| %>
-    <%= render "shared/cousin", cousin: cousin %>
-    <a href="<%= cousin.request_path %>">More news...</a>
-  <% end %>
-
-  <% if false %>
+  <% CousinPage.all.group_by(&:family).each do |family, cousins| %>
     <wa-card style="max-width: 70ch; margin: auto">
-      <h3 class="wa-heading-m">The Onuskas - Uncle Mike and Aunt Sot</h3>
+      <h3 class="wa-heading-m"><%= family %></h3>
       <div class="wa-stack">
-        <wa-details>
-          <span class="wa-heading-m" slot="summary">Michael</span>
-          <div class="wa-stack">
-            <article class="wa-flank">
-              <i class="fa-solid fa-people fa-xl" style="color: var(--wa-color-blue-30)"></i>
-              <div class="wa-split">
-                <div class="wa-stack wa-gap-0">
-                  <span class="wa-heading-s">Cousins</span>
-                  <div class="wa-cluster wa-gap-2xs">
-                    <span><%= link_to "Michael", "https://www.linkedin.com/in/michael-onuska-273bb513/" %> and Melissa</span>
-                    <br />
-                  </div>
-                </div>
-              </div>
-            </article>
-            <wa-divider></wa-divider>
-            <article class="wa-flank">
-              <i class="fa-solid fa-children fa-sm" style="color: var(--wa-color-blue-30)"></i>
-              <div class="wa-split">
-                <div class="wa-stack wa-gap-0">
-                  <span class="wa-heading-s">Children</span>
-                  <div class="wa-cluster wa-gap-2xs">
-                    <span>Brooke, Brayden, and Brielle</span>
-                    <br />
-                  </div>
-                </div>
-              </div>
-            </article>
-            <wa-divider></wa-divider>
-            <article class="wa-flank">
-              <i class="fa-regular fa-newspaper fa-xl" style="color: var(--wa-color-blue-30)"></i>
-              <div class="wa-split">
-                <div class="wa-stack wa-gap-0">
-                  <span class="wa-heading-s">News</span>
-                  <span>Living in Watchung, NJ. Co-owns <%= link_to "Sunburst Gymnastics", "https://www.sunburstnj.com/" %></span>
-                </div>
-              </div>
-            </article>
-          </div>
-        </wa-details>
-        <wa-details>
-          <span class="wa-heading-m" slot="summary">Christopher</span>
-          <div class="wa-stack">
-            <article class="wa-flank">
-              <i class="fa-solid fa-people fa-xl" style="color: var(--wa-color-blue-30)"></i>
-              <div class="wa-split">
-                <div class="wa-stack wa-gap-0">
-                  <span class="wa-heading-s">Cousins</span>
-                  <div class="wa-cluster wa-gap-2xs">
-                    <span><%= link_to "Christopher", "https://www.linkedin.com/in/chris-onuska-81513157/" %> and Rebecca</span>
-                    <br />
-                  </div>
-                </div>
-              </div>
-            </article>
-            <wa-divider></wa-divider>
-            <article class="wa-flank">
-              <i class="fa-solid fa-children fa-sm" style="color: var(--wa-color-blue-30)"></i>
-              <div class="wa-split">
-                <div class="wa-stack wa-gap-0">
-                  <span class="wa-heading-s">Children</span>
-                  <div class="wa-cluster wa-gap-2xs">
-                    <span>Tyler and Kallie</span>
-                    <br />
-                  </div>
-                </div>
-              </div>
-            </article>
-            <wa-divider></wa-divider>
-            <article class="wa-flank">
-              <i class="fa-regular fa-newspaper fa-xl" style="color: var(--wa-color-blue-30)"></i>
-              <div class="wa-split">
-                <div class="wa-stack wa-gap-0">
-                  <span class="wa-heading-s">News</span>
-                  <span>Living in Spotswood, NJ. Co-owns <%= link_to "Sunburst Gymnastics", "https://www.sunburstnj.com/" %></span>
-                </div>
-              </div>
-            </article>
-          </div>
-        </wa-details>
-        <wa-details>
-          <span class="wa-heading-m" slot="summary">Jennifer</span>
-          <div class="wa-stack">
-            <article class="wa-flank">
-              <i class="fa-solid fa-people fa-xl" style="color: var(--wa-color-blue-30)"></i>
-              <div class="wa-split">
-                <div class="wa-stack wa-gap-0">
-                  <span class="wa-heading-s">Cousins</span>
-                  <div class="wa-cluster wa-gap-2xs">
-                    <span><%= link_to "Jenn", "https://www.facebook.com/jenn.busch.31" %> and used to be Paul, now xxx</span>
-                    <br />
-                  </div>
-                </div>
-              </div>
-            </article>
-            <wa-divider></wa-divider>
-            <article class="wa-flank">
-              <i class="fa-solid fa-children fa-sm" style="color: var(--wa-color-blue-30)"></i>
-              <div class="wa-split">
-                <div class="wa-stack wa-gap-0">
-                  <span class="wa-heading-s">Children</span>
-                  <div class="wa-cluster wa-gap-2xs">
-                    <span>Alena, Nadine, and Gino</span>
-                    <br />
-                  </div>
-                </div>
-              </div>
-            </article>
-            <wa-divider></wa-divider>
-            <article class="wa-flank">
-              <i class="fa-regular fa-newspaper fa-xl" style="color: var(--wa-color-blue-30)"></i>
-              <div class="wa-split">
-                <div class="wa-stack wa-gap-0">
-                  <span class="wa-heading-s">News</span>
-                  <span>Living on a farm...or was living on a farm?</span>
-                </div>
-              </div>
-            </article>
-          </div>
-        </wa-details>
+        <% cousins.each do |cousin| %>
+          <%= render "shared/cousin", cousin: cousin %>
+        <% end %>
       </div>
     </wa-card>
   <% end %>
+
 </article>
