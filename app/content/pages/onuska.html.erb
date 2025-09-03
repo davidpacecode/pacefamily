@@ -36,6 +36,8 @@ public: true
       <h3 class="wa-heading-m"><%= family %></h3>
       <div class="wa-stack">
         <% cousins.each do |cousin| %>
+          <%= cousin.first_name %>
+          <%= tag.br %>
           <%= render "shared/cousin", cousin: cousin %>
         <% end %>
       </div>
